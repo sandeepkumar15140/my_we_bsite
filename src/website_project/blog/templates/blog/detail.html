@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Album </title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -34,22 +34,15 @@
 
 <main role="main">
     <div class ="container">
-    <h1 class="text-center pt-3">Welcome to Harmony Pictures</h1>
-    <br/>
-</br>
-<h2>Latest Pictures</h2>
-<hr/>
+    <h1 class="text-center pt-3">{{ blog.title }}</h1>
+    
 
+ 
+<p class="text-center" >{{ blog.nice_date_frmt }}</p>
 
-{% for blog in blogs.all %}
-<a href="{% url 'detail' blog.id %}"><h4>{{ blog.id }}. {{ blog.title }}</h4></a>
-{{ blog.nice_date_frmt }}
-<br/>
-<img class="img-fluid" width=400 height=200 src = "{{ blog.image.url }}" />
-<br/>
-{{ blog.summary }}
+<p class="text-center"><img class="img-fluid" src = "{{ blog.image.url }}" height="329" width="550"/></p>
+<p class="text-center">{{ blog.summary }}</p>
 
-{% endfor %}
 
 </div>
 
@@ -59,8 +52,7 @@
 <footer class="text-muted">
   <div class="container text-center">
     <p> &copy; Right Harmony {% now "Y" %}</p>
-      <a href="#">Back to top</a>
-    
+        
 </footer>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
