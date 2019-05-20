@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Harmony </title>
+    <title>Album </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -20,10 +20,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item ">
-              <a class="nav-link active" href="{% url 'home' %}">Home </a>
+              <a class="nav-link" href="{% url 'home' %}">Home </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{%url 'allblogs' %}">Album</a>
+              <a class="nav-link active" href="{% url 'allblogs' %}">Album</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://twitter.com/SandyKumar15140">Twitter</a>
@@ -33,42 +33,20 @@
       </nav></header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
-    <div class="container">
-      <h1 class="jumbotron-heading">Harmony Photo Gallery</h1>
-      <p class="lead text-muted">We make evey occasion a memorable occasion. We are a professional group of photo graphers around the  world..</p>
-      <p>
-        <a href="mailto:sandeep.kumar15140@gmail.com" class="btn btn-primary my-2">Email Me</a>
-    
-      </p>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src = "{{ job.image.url }}" />
-            <div class="card-body">
-              <p class="card-text"> {{ job.summary }}</p>
-                
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-       
+    <div class ="container">
+    <h1 class="text-center pt-3">Welcome to Harmony Pictures</h1>
+    <br/>
+</br>
+<h2>Latest Pictures</h2>
+<hr/>
+</div>
             
 </main>
 
+
 <footer class="text-muted">
   <div class="container text-center">
-    <p> &copy; Harmony {% now "Y" %}</p>
+    <p> &copy; Right Harmony {% now "Y" %}</p>
       <a href="#">Back to top</a>
     
 </footer>
