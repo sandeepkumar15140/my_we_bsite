@@ -2,6 +2,8 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+      {% load staticfiles %}
     <title>Album </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -13,7 +15,10 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'home' %}">Harmony</a>
+      <a class="navbar-brand" href="{% url 'home' %}">
+          <img src="{% static 'logo.png' %}" class="d-inline-block align=top"/>
+          Harmony</a>
+          
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
